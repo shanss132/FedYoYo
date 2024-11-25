@@ -1,1 +1,2 @@
-FedYoYo
+run 
+nohup bash fedyoyo.sh
