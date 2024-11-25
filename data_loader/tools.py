@@ -87,7 +87,7 @@ def imagenet_classify_label(dataset, num_classes: int):
 def show_clients_data_distribution(dataset, clients_indices: list, num_classes ):
     dict_per_client = []
     for client, indices in enumerate(clients_indices):
-        nums_data = [0 for _ in range(num_classes)] #十个0
+        nums_data = [0 for _ in range(num_classes)] 
         for idx in indices:
             label = dataset[idx][1] 
             nums_data[label] += 1
@@ -97,7 +97,7 @@ def show_clients_data_distribution(dataset, clients_indices: list, num_classes )
 def new_show_clients_data_distribution(dataset, clients_indices: list, num_classes ):
     dict_per_client = []
     for client, indices in enumerate(clients_indices):
-        nums_data = [0 for _ in range(num_classes)] #十个0
+        nums_data = [0 for _ in range(num_classes)]
         for idx in indices:
             # label = dataset[idx][3] 
             label = dataset.target[idx]
@@ -108,7 +108,7 @@ def new_show_clients_data_distribution(dataset, clients_indices: list, num_class
 def new_imagenet_show_clients_data_distribution(dataset, clients_indices: list, num_classes ):
     dict_per_client = []
     for client, indices in enumerate(clients_indices):
-        nums_data = [0 for _ in range(num_classes)] #十个0
+        nums_data = [0 for _ in range(num_classes)]
         for idx in indices:
             label = dataset.targets[idx] 
             nums_data[label] += 1
