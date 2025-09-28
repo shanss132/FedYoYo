@@ -9,7 +9,7 @@ lamda=4.0
 gamma=0.1
 warmup=50
 
-CUDA_VISIBLE_DEVICES=$device_id python -u main_fedyoyo_github.py \
+CUDA_VISIBLE_DEVICES=$device_id python -u main_fedyoyo.py \
     --noniid $noniid \
     --imb_factor $imb_factor \
     --dst $dst \
@@ -20,4 +20,4 @@ CUDA_VISIBLE_DEVICES=$device_id python -u main_fedyoyo_github.py \
     --warmup $warmup \
     --lamda $lamda \
 
-#  nohup bash fedyoyo_github.sh 
+#  nohup bash fedyoyo.sh 
