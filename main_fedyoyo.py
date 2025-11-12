@@ -29,7 +29,7 @@ from utils import *
 from data_loader.tools import *
 from data_loader.imbalance_cifar import *
 from data_loader.imbalance_svhn import *
-from losses import *
+# from losses import *
 EPS = 1e-6
  
 parser = argparse.ArgumentParser(description='PyTorch Cifar Training')
@@ -430,7 +430,7 @@ def FedYoYo():
         # aggregating local models with FedAvg
         fedavg_params = global_model.initialize_for_model_fusion(list_dicts_local_params, list_nums_local_data) 
        
-        acc1 = global_model.global_eval(fedavg_params, data_global_test, args.batch_size_test)
+        acc1 = global_model.global_eval(fedavg_params, data_global_test, args.batch_size_test, log_testing)
         global_acc_list.append(acc1)
         print('\n'+f"Round {r}, Global Acc: {acc1:.2f}")
         

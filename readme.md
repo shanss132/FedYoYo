@@ -61,15 +61,17 @@ CUDA_VISIBLE_DEVICES=$device_id python -u main_fedyoyo.py \
     --gamma $gamma \
     --warmup $warmup \
     --lamda $lamda \
-# nohup bash run fedyoyo.sh
+# nohup bash fedyoyo.sh > fedyoyo_cifar10_noniid0.5_imb0.01.log 2>&1 &
 ```
 
 ## citation
 
-> @article{yan2025you,  
-title={You Are Your Own Best Teacher: Achieving Centralized-level Performance in Federated Learning under Heterogeneous and Long-tailed Data},  
-author={Yan, Shanshan and Li, Zexi and Wu, Chao and Pang, Meng and Lu, Yang and Yan, Yan and Wang, Hanzi},  
-journal={arXiv preprint arXiv:2503.06916},  
-year={2025}
+> @InProceedings{Yan_2025_ICCV,
+    author    = {Yan, Shanshan and Li, Zexi and Wu, Chao and Pang, Meng and Lu, Yang and Yan, Yan and Wang, Hanzi},
+    title     = {You Are Your Own Best Teacher: Achieving Centralized-level Performance in Federated Learning under Heterogeneous and Long-tailed Data},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2025},
+    pages     = {2750-2759}
 }
 

@@ -1,6 +1,6 @@
 device_id=2
 noniid=0.5
-imb_factor=0.1
+imb_factor=0.01
 dst='cifar10'
 arch="resnet8"
 method="fedyoyo"
@@ -20,4 +20,4 @@ CUDA_VISIBLE_DEVICES=$device_id python -u main_fedyoyo.py \
     --warmup $warmup \
     --lamda $lamda \
 
-#  nohup bash fedyoyo.sh 
+#  nohup bash fedyoyo.sh > fedyoyo_cifar10_noniid0.5_imb0.01.log 2>&1 &
